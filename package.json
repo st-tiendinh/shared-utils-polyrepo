@@ -1,6 +1,6 @@
 {
   "name": "@st-tiendinh/shared-utils-polyrepo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Shared utility functions including date formatting",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
