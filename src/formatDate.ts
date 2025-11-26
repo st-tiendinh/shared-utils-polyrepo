@@ -1,4 +1,7 @@
-export function formatDate(date: Date | string, format: 'short' | 'long' = 'short'): string {
+export function formatDate(
+  date: Date | string,
+  format: 'short' | 'long' = 'short'
+): string {
   const d = typeof date === 'string' ? new Date(date) : date;
 
   // if (format === 'short') {
@@ -16,8 +19,7 @@ export function formatDate(date: Date | string, format: 'short' | 'long' = 'shor
   //   weekday: 'long',
   // });
 
-
-    if (format === 'short') {
+  if (format === 'short') {
     // ISO format: YYYY-MM-DD
     return d.toISOString().split('T')[0];
   }
@@ -29,7 +31,6 @@ export function formatDate(date: Date | string, format: 'short' | 'long' = 'shor
   const hours = String(d.getHours()).padStart(2, '0');
   const minutes = String(d.getMinutes()).padStart(2, '0');
   const seconds = String(d.getSeconds()).padStart(2, '0');
-  
-  return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
 
+  return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
 }
